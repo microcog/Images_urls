@@ -3,10 +3,12 @@
 • Cause-Effect：事件之间存在因果关系，无主观目的，例如“女孩摔倒会导致什么？”“女孩为什么哭？”等。
 • Means-to-an-End(意图-结果)：事件之间存在主观意图的因果关系，一个事件是实现另一个事件的手段，例如“为什么要切番茄？”“如何做菜？”等
 
+
 （2）VStream-QA from Flash-VStream：online video stream QA (即L1 & L2, 但缺少因果、共指; 未考察跨时相关能力)
 • Scene Summary  • Action Description ：评估对静态和动态场景内容的理解能力 。开放式
 • Event Occurrence(是/否问题)：评估对视频中特定事件或场景的检测能力。是/否问题
 • Ordered Event Narrative  • Sequence Validation(是/否问题)：评估对事件时间顺序的理解能力 。
+
 
 (3) STREAMBENCH from STREAMCHAT: online video stream QA(聚焦于L2~L4的跨时相关特性, 问题类型并不丰富；包含常识问题)
 • Object Search (OS): 准确描述视频中对象的位置，对象出现的时间必须少于5秒，从出现到用户请求的时间间隔要超过30秒
@@ -14,31 +16,34 @@
 • Short-term Memory Search (SM): 模拟用户对最近事件的兴趣，从事件完成到用户查询的间隔设置为小于20秒，以评估模型对最近活动的响应。
 • Conversational Interaction (CI): 从内存中检索最相关的文本作为上下文支持，间隔超过2个对话。这种类型的设计是为了模拟多回合对话场景，有时用户当前问题的答案与会话历史密切相关。
 • Simple Factual (SF): 侧重于用户和模型之间的友好对话 ，在视频开始后30秒内被问到，模型需要在短期内记住一些东西才能正确回答。
-————
+  ————
 • Knowledge-based Question Answering (KG): 评估基础大型语言模型的内部知识应用。 ——》常识
+
 
 （4）SVBench （未包含L1问题；相较L4问题类型定义更为明确、丰富；包含常识问题；未显式考察跨时相关能力)
 • Spatio-Temporal Speculation: 理解视频中的空间和时间关系。
 • Intention Inference：辨别角色行为背后的潜在意图。
 • Relationship Inference: 识别和解释实体之间的关系。——》包含于共指
-————
+  ————
 • Potentiality Assessment: 评估某一行为在一定条件下的可行性。——》推理 
 • Counterfactual Reasoning: 通过假设替代情景来分析结果。——》推理 
 • Character State and Transition: 跟踪分析对象在特定语境下的情绪状态和过渡。 ——》总结 
 • Comparison and Trend Analysis: 对比不同的实体，分析新兴趋势。 ——》分析 & 预测
 • Event-Centric Analysis: 侧重于对重大事件的深入研究。——》分析
-————
+  ————
 • Common Sense Inference:运用一般的世界知识提供逻辑框架。 ——》常识
+
 
 (5) NextQA（定义与L1~L3高度重合, 可参考；缺失L4问题；未考察跨时相关能力)
 • Descriptive Questions：视频的场景描述(例如，地点、对象/属性和主要动作/事件)。这些问题包括二元选择(是/否)，或者在问题中指出答案，例如，“……累还是精力充沛?”)、地点(在哪里)、数量(有多少)以及其他自由形式的问题。对自由形式问题的唯一要求是答案可以明显地从视频中推断出来。
-————
+  ————
 • Temporal Questions：评估模型对行为之间时间关系的推理能力。虽然与因果关系有关，但仅由发生的顺序决定，更多地强调对象之间的相互作用。这种类型的问题是关于之前的(什么……)在……之前做……，现在做……when/while/as…)或next actions (what/how…)做/反应后…)。
-————
+  ————
 • Causal Questions: 因果问题是用来解释行为的，或者揭示先前发生的行为的意图，或者说明后续行为的原因。，因果组中的问题要么是问为什么物体以某种方式行动，要么是问如何(它们做了什么)产生观察到的效果。因此，原因和结果都应该在视频中可见。
 
+
 （6） Video-MME（相较L1 L2问题，Video-MME类型定义更为细致；缺失L3(因果) L4 (复杂) 问题；未考察跨时相关能力）
-————评估感知能力 :
+  ————评估感知能力————
 •Temporal Perception
 • Spatial Perception
 • Attribute Perception
@@ -46,13 +51,14 @@
 • Object Recognition
 • OCR Problems
 • Counting Problems
-————评估推理能力：
+  ————评估推理能力————
 •Temporal Reasoning
 • Spatial Reasoning
 • Action Reasoning
 • Object Reasoning
-————评估信息总结能力：
+  ————评估信息总结能力————
 • Information Synopsis
+
 
 （7） Ours:
 • L1：Actions, Objects, Environment, Attributes——》 常见类型，对视觉信息的描述性问题。
