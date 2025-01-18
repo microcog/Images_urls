@@ -1,3 +1,4 @@
+原始prompt详见：https://github.com/microcog/QA_ToT_pipeline/blob/master/generate_QA_pairs.py
 ————————————Start Generating——————————————
 ### **输入信息**：
 1. 当前视频帧代表了当前视频片段的内容。  
