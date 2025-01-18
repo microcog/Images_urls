@@ -61,7 +61,7 @@
 
 (7) Ours:
 • L1：Actions, Objects, Environment, Attributes——》 常见类型，对视觉信息的描述性问题。
-• L2：Sequential, Coreference, 
+• L2：Temporal, Co-reference, 
 • L3：Causation, Attributes；
 • L4:  Summary, Reasoning, Analysis, Prediction ——》L2~L4问题不论类型，均天然具有跨时相关特性 (类似STREAMBENCH的LM、SM、CI)，在其他数据集中较为独特。其答案均需要历史输入的“视频片段V、用户Q，模型A”作为推理依据，QA不局限于当前视频片段。
 • 视频末尾L4: Global Analysis ,Video Overall Summary, Highlights Grounding ——》强调对历史信息的整体总结和理解，需要较强的推理和整合能力，这在其他数据集中较少涉及。
